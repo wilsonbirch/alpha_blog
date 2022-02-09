@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(article_params)
+    @article.user = User.first
     if @article.save
       flash[:notice] = "Article was created successfully."
       redirect_to @article 
@@ -35,8 +36,9 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article.destroy
-    redirect_to edit_user_path(articles_path)
+    if @article.destroy
+     redirect_to articles_path
+    end
   end
 
   private

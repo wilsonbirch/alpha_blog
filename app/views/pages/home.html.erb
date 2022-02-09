@@ -1,4 +1,7 @@
-<h1>Welcome!</h1>
-
-<%= link_to "View Articles", articles_path %> |
-<%= link_to "About Page", about_path %>
+<div class="home-page card bg-dark text-white">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Welcome to Blog Mania</h5>
+    <p class="card-text">Feel free to make an account and begin creating blog posts! They will only be accessible by you</p>
+    <%= link_to "Sign up", signup_path, class: "btn btn-secondary btn-lg" %>
+  </div>
+</div>
