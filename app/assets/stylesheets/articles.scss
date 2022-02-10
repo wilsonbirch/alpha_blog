@@ -24,11 +24,16 @@
     }
 }
 
-.alert-danger{
-    margin: auto;
-    margin-top: 20px;
-    h2{
-        font-size: 20px;
+.alert{
+    &-danger{
+        margin: auto;
+        margin-top: 20px;
+        h2{
+            font-size: 20px;
+        }
+    }
+    &-success{
+        margin-top: 20px;
     }
 }
 

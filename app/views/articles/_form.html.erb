@@ -1,14 +1,5 @@
 <div class ="container">
-  <% if @article.errors.any? %> 
-    <div class="container alert alert-danger col-10 " role="alert">
-      <h2>The following errors prevented the article from being saved</h2> 
-      <ul> 
-        <% @article.errors.full_messages.each do |msg| %> 
-          <li><%= msg %></li> 
-        <% end %> 
-      </ul>
-    </div>
-  <% end %>
+  <%= render "shared/errors" %>
 
   <div class="container articles-content" >
     <%= form_with(model: @article, class: "shadow p-3 mb-5 bg-secondary rounded", local: true, data: { turbo: false })  do |f| %>
