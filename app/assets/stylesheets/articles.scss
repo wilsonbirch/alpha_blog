@@ -38,6 +38,11 @@
 }
 
 .btn-container{
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin:20px 0px 0px 0px;
+    .btn{
+        margin:0px 2px 0px 2px;
+    }
 }
