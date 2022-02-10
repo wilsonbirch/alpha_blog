@@ -1,0 +1,19 @@
+.home-page{
+    background-image: asset-url('home_wallpaper.jpg');
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+    width:80%;
+    height:100%;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-overlay{
+    text-align: center;
+    padding: 100px 16px 16px 16px;
+    height:80%
+}
+
