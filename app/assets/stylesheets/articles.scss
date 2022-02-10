@@ -3,6 +3,25 @@
         text-align: center;
         margin:10px 0px 0px 0px;
     }
+    &-content{
+        margin:30px 0px 10px 0px;
+        .col{
+            &-form{
+                &-label{
+                    font-weight: bold;
+                    color: rgba(255,255,255,.55);
+                }
+            }
+        }
+        .form{
+            &-group{
+                margin:20px;
+            }
+            .mb-5{
+                margin-bottom: 1rem!important;
+            }
+        }
+    }
 }
 
 .btn-container{

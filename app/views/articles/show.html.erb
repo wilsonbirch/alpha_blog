@@ -1,6 +1,23 @@
-<h1>Showing article details</h1>
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong><%= @article.description %></p>
+<h1 class="articles-title">Showing article details</h1>
 
-<%= link_to 'Back to Articles', articles_path %> |
-<%= link_to 'Edit', edit_article_path(@article) %> 
+<div class="row justify-content-md-center">
+  <div class="col-7 mt-4">
+    <div class="card">
+      <div class="card-header">
+        <%= @article.title %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Author</h5>
+        <p class="card-text"><%=  @article.description %></p>
+        <div class="btn-container">
+          <%= link_to 'Back to Articles', articles_path, class:"btn btn-primary" %>
+          <%= link_to 'Edit', edit_article_path(@article), class:"btn btn-secondary" %>
+          <%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" }, class:"btn btn-success" %>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        <small>Created <%= time_ago_in_words(@article.created_at)%> ago, edited <%= time_ago_in_words(@article.updated_at)%> ago</small>
+      </div>
+    </div>
+  </div>
+</div>
