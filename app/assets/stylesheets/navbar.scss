@@ -5,3 +5,16 @@
     letter-spacing: -1px;
     font-weight: bold;
 }
+
+.container-fluid{
+    padding-right: var(--bs-gutter-x,8rem) !important;
+    padding-left: var(--bs-gutter-x,8rem) !important;
+}
+
+.fa-circle-user{
+    font-size: 26px;
+}
+
+.dropdown-toggle{
+    padding: 0px !important;
+}
