@@ -1,14 +1,12 @@
 <h1 class="articles-title">Articles Listing Page</h1>
 
+<% if logged_in? %>
+  <div class="btn-container">
+    <%= link_to 'Create new article', new_article_path, class:"btn btn-dark" %>
+  </div>
+<% end %>
 
-<div class="flickr_pagination">
-  <%= will_paginate @articles, :container => false %>
-</div>
 <%= render 'article' %>
-
-<div class="btn-container mb-3">
-  <%= link_to 'Create new article', new_article_path, class:"btn btn-dark" %>
-</div>
 
 <div class="flickr_pagination pagination_bottom">
   <%= will_paginate @articles, :container => false %>
