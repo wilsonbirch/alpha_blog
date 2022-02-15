@@ -7,7 +7,7 @@
         <%= @article.title %>
       </div>
       <div class="card-body">
-        <h6 class="card-title ">by <%= @article.user.username%></h6>
+        <h6 class="card-title ">by <%= link_to @article.user.username, user_path(@article.user) %></h6>
         <p class="card-text"><%=  @article.description %></p>
         <div class="btn-container">
           <%= link_to 'Back to Articles', articles_path, class:"btn btn-primary" %>

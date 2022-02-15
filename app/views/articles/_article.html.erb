@@ -7,7 +7,11 @@
             <%= article.title %>
           </div>
           <div class="card-body">
-            <h6 class="card-title ">by <%= article.user.username%></h6>
+            <h6 class="card-title ">
+              <% if article.user %>
+                by <%= link_to article.user.username, user_path(article.user) %>
+              <% end %>
+            </h6>
             <p class="card-text"><%= truncate(article.description,length:100) %></p>
             <div class="btn-container">
               <%= link_to 'Show', article_path(article), class:"btn btn-primary" %>
