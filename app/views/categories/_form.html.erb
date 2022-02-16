@@ -1,0 +1,16 @@
+<div class ="container">
+  <%= render "shared/errors", obj: @category %>
+  <div class="container articles-content" >
+    <%= form_with(model: @category, class: "shadow p-3 mb-5 bg-secondary rounded", local: true, data: { turbo: false })  do |f| %>
+      <div class="form-group row">
+        <%= f.label :name, "Category name:", class: "col-2 col-form-label" %>
+        <div class="col-10">
+          <%= f.text_field :name, class:"form-control shadow rounded", placeholder: "Enter name here" %>
+        </div>
+      </div>
+      <div class="btn-container">
+        <%= f.submit class: "btn btn-outline-dark btn-lg" %>
+      </div>
+    <%end%>
+  </div>
+</div>
