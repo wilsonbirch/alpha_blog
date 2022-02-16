@@ -18,10 +18,10 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= "(Admin)" if logged_in? && current_user.admin? %>
             <i class="fa-solid fa-circle-user"></i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            
             <% if logged_in? %>
               <%= link_to 'My Profile', user_path(current_user), class:"dropdown-item" %>
               <%= link_to 'Edit Profile', edit_user_path(current_user), class:"dropdown-item" %>
