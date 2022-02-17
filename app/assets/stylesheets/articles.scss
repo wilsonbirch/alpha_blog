@@ -46,3 +46,15 @@
         margin:0px 2px 0px 2px;
     }
 }
+
+.bg-dark{
+    text-decoration: none;
+}
+.bg-dark:hover{
+    color: grey;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
